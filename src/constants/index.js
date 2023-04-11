@@ -1,3 +1,4 @@
+// png файлы из папки (assets - ресурсы)
 import {
     mobile,
     backend,
@@ -25,6 +26,7 @@ import {
     threejs,
   } from "../assets";
   
+  // данные ссылок (id, title...)
   export const navLinks = [
     {
       id: "about",
