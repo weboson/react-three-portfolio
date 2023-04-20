@@ -8,7 +8,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 import { Mesh } from "three";
 
-const Computers = () => {
+const Computers = ({ isMobile }) => {
   //! загрузчик gltf-моделей из библиотеки '@react-three/drei'
   const computer = useGLTF('./desktop_pc/scene.gltf');
 
@@ -33,10 +33,10 @@ const Computers = () => {
       {/* //! сцена */}
       <primitive 
         object={computer.scene}
-        scale={0.75}
+        scale={isMobile ? 0.7 : 0.75}
         //! позиция (ниже заголовка) 
-        position={[0, -3.25, -1.5]}
-        //! камера смотрит чуть сверхку 
+        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        //! камера смотрит чуть сверху 
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -45,6 +45,33 @@ const Computers = () => {
 
 
 const ComputersCanvas = () => {
+  // для адаптации 3D модели под размеры экрана (адаптивность) 
+  // передадим в пропсы <Computers isMobile={isMobile} /> и используем в позиции и размерах сцены  (<primitive />)
+  const [ isMobile, setIsMobile ] = useState(false);
+
+  //! для адаптации - определение экрана, и сравнения его с "max-width: 500"
+  useEffect(() => {
+    // метод .matchMedia проверяет соответствует ли текущий экран введенным нами аргументу
+    // - возвращает объект со свойствов маркером .matches (true/false)
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
+    // установить текущее значение .matches (true/false) 
+    setIsMobile(mediaQuery.matches); //* при первом монтировании
+
+    // обработчик для слушателя события "change" (изменять)
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches); //* при последующих изменениях экрана (change)
+    }
+    // слушатель события от "window.matchMedia() => mediaQuery" (вызывает обработчик при изменении свойств экрана)
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    // удалить слушателя
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    }
+
+
+  }, []); // пустой массив (без зависимостей), т.е. функция запустится единожды, только при “монтировании” 
+
   return (
     <Canvas
       frameloop='demand'
@@ -58,7 +85,7 @@ const ComputersCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
       />
-        <Computers />
+        <Computers isMobile={isMobile} />
       </Suspense>
 
       <Preload all/>
