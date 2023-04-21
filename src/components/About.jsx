@@ -8,8 +8,12 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 // данные (текст) для заполнения карточек
 import { services } from '../constants'; // index.js
-// стили в виде JS-функций возвращающих  объекты со стилями -  для подсвечивания текста
+// стили в виде JS-функций возвращающих объекты со стилями -  для подсвечивания текста
 import { fadeIn, textVariant } from '../utils/motion';
+
+// компонент обёртка, чтобы центрировать, ориентировать по id и не только, остальные разделы:
+import SectionWrapper from "../hoc/SectionWrapper";
+
 
 // компонент "карточки"
 const ServiceCard = ({ index, title, icon }) => {
@@ -19,7 +23,7 @@ const ServiceCard = ({ index, title, icon }) => {
       <motion.div
         // fadeIn(направление, тип: sping-пружина, задержка, продолжительность) */}
         variants={fadeIn("right", 'spring', 0.5 * index, 0.75)} // из utils/motion.js
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card" // green-pink-gradient - из index.css
       >
         <div
           options={{
@@ -67,4 +71,7 @@ const About = () => {
   )
 }
 
-export default About
+
+//export default About
+// В обёртке (файл SectionWrapper.jsx):
+export default SectionWrapper(About, "about");
