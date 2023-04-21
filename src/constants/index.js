@@ -1,7 +1,7 @@
 // png файлы из папки (assets - ресурсы)
 import {
-    mobile,
-    backend,
+    frontend,
+    design,
     creator,
     web,
     javascript,
@@ -48,12 +48,12 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
-      icon: mobile,
+      title: "React Developer",
+      icon: frontend,
     },
     {
-      title: "Backend Developer",
-      icon: backend,
+      title: "Web Designer",
+      icon: design,
     },
     {
       title: "Content Creator",
