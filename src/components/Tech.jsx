@@ -2,7 +2,7 @@
 import React from 'react'
 // компонент шарика (ball)
 import { BallCanvas } from './canvas';
-// обертка для стилей, анимаций...
+// обертка для стилей, анимаций (наезд )
 import { SectionWrapper } from '../hoc';
 // контент (текст) для шаров
 import { technologies } from '../constants';

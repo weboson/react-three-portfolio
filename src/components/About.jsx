@@ -21,7 +21,7 @@ const ServiceCard = ({ index, title, icon }) => {
     // Tilt - библиотека анимации НАКЛОНА карточек
     <Tilt className='xs:w-[250px] w-full'>
       <motion.div
-        // fadeIn(направление, тип: sping-пружина, задержка, продолжительность) */}
+        // fadeIn - исчезать(направление, тип: sping-пружина, задержка, продолжительность) */}
         variants={fadeIn("right", 'spring', 0.5 * index, 0.75)} // из utils/motion.js
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card" // green-pink-gradient - из index.css
       >
