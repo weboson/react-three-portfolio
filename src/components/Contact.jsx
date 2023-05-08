@@ -37,9 +37,10 @@ const Contact = () => {
   const handleSubmit = (e) => { };
 
   return (
+    //! форма
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
       <motion.div
-        variants={slideIn('left', 'tween', 0.2, 1)}
+        variants={slideIn('left', 'tween', 0.2, 1)} // движение слево на право
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
@@ -107,6 +108,15 @@ const Contact = () => {
           </button>
         </form>
 
+      </motion.div>
+
+      {/* //! звезды + земля */}
+      <motion.div
+        variants={slideIn('right', 'tween', 0.2, 1)} // движение справа налево
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+      >
+        {/* //! земля */}
+        <EarthCanvas/>
       </motion.div>
     </div>
   )
