@@ -51,6 +51,7 @@ const Ball = (props) => {
           position={[0,0,1]}
           // повернуть по горизонтали  (чтобы не было как в зеркале)
           rotation={[ 2 * Math.PI, 0, 6.25]}
+          scale={1}
           flatShading
           map={decal}
         />
@@ -65,9 +66,11 @@ const BallCanvas = ({ icon }) => {
     // пoхоже, как и в Computers.jsx
     <Canvas 
        frameloop='demand'
+       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader/>}>
+        {/* если автовращение -> <OrbitControls autoRotate enableZoom={false} /> */}
         <OrbitControls enableZoom={false} />
           <Ball imgUrl={icon} />
       </Suspense>

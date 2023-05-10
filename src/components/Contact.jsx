@@ -31,10 +31,51 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   // обработчик формы: 
-  const handleChange = (e) => { };
+  const handleChange = (e) => { 
+    console.log(e.target) // содержит HTML-элемент <input type="text" name="name" placeholder="What's your name?" class="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outliner-none border-none font-medium" value="текст ">
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value })
+  };
 
   // обработчик формы:
-  const handleSubmit = (e) => { };
+  const handleSubmit = (e) => { 
+    e.preventDefault(); // отключить рекацию по-умолчанию: обновление окна при нажатии на "Отправить"
+    setLoading(true); // лоадинг
+
+    //* библиотека не активная (не регистрировался в https://www.emailjs.com/)
+    emailjs.send(
+      'servise_ID',
+      'template_ID',
+      {
+        from_name: form.name,
+        to_name: 'Rishat',
+        from_email: form.email,
+        to_email: 'contact@jsmastery.pro',
+        message: form.message,
+      },
+      'Key'
+    )
+    .then(() => {
+      //* при успешной отпавки Email
+      setLoading(false);
+      alert('Thank you. I will get back to you as soon as possible.');
+
+      // сброс строк
+      setForm({
+        name: '',
+        email: '',
+        message: '',
+      })
+    }, 
+    //* при ошибке
+    (error) => {
+      setLoading(false);
+
+      console.log(error);
+      alert('Something went wrong.');
+    })
+  };
 
   return (
     //! форма
