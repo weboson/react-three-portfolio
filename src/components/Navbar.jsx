@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     // классы на наподобие  "w-full flex items-center py-5 fixed top-0 z-20 bg-primary" - это классы от tailwindcss 
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 bg-primary`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link 
@@ -26,8 +26,8 @@ const Navbar = () => {
             window.scrollTo(0,0);
           }}
         >
-          <img src={logo} alt="logo" className='w-9 h-9 object-contain'/>
-          <p className='text-white text-[18px] font-bold cursor-pointer flex'>Rishat&nbsp;<span className='sm:block hidden'>|Front-end</span></p>
+          <img src={logo} alt="logo" className='w-12  object-contain'/>
+          <p className='text-white text-[18px] font-bold cursor-pointer flex'>Weboson&nbsp;<span className='sm:block hidden'>|&nbsp;Rishat</span></p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
