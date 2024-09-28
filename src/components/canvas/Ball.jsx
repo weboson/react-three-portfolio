@@ -23,7 +23,7 @@ import {
 import CanvasLoader from '../Loader';
 
 const Ball = (props) => {
-  // decal - наклейка на текстуру - пропсы из компонента снизу
+  //! decal - наклейка на текстуру - пропсы из компонента снизу
   const [decal] = useTexture([props.imgUrl])
 
   // (всё должно быть, иначе -  ничего не видно)
@@ -47,6 +47,7 @@ const Ball = (props) => {
           polygonOffsetFactor={-5}
           flatShading
         />
+        {/* изображение иконок на самих шарах */}
         <Decal 
           position={[0,0,1]}
           // повернуть по горизонтали  (чтобы не было как в зеркале)

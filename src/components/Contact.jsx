@@ -43,7 +43,7 @@ const Contact = () => {
     e.preventDefault(); // отключить рекацию по-умолчанию: обновление окна при нажатии на "Отправить"
     setLoading(true); // лоадинг
 
-    //* библиотека не активная (не регистрировался в https://www.emailjs.com/)
+    //! библиотека не активная (т.к. не регистрировался в https://www.emailjs.com/)
     emailjs.send(
       'servise_ID',
       'template_ID',
@@ -51,7 +51,7 @@ const Contact = () => {
         from_name: form.name,
         to_name: 'Rishat',
         from_email: form.email,
-        to_email: 'contact@jsmastery.pro',
+        to_email: 'virisound@gmail.com',
         message: form.message,
       },
       'Key'
@@ -88,6 +88,7 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
+          // action="mailto:virisound@gmail.com" method="post"
           ref={formRef}
           onSubmit={handleSubmit}
           className='mt-12 flex flex-col gap-8'

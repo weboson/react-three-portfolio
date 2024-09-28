@@ -55,20 +55,24 @@ const About = () => {
       {/* // fadeIn(направление, тип, задержка, продолжительность) */}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-4xl leading-[30px]"
+        className="mt-4 text-secondary text-[17px] max-w-4xl leading-[30px] text-justify"
       >
-        Я начинающий разработчик web-приложений, с опытом работы на языках ПО
+        Я начинающий разработчик web-приложений, с опытом работы на языках
         TypeScript и JavaScript, специализируюсь на фреймворках: React, Node.js,
-        Nest.js, Redux Toolkit и так далее. <br className="sm:block hidden" />{" "}
+        Nest.js, Redux Toolkit и так далее. <br />
         Основным направлением, для себя считаю, "front-end", но тем не менее,
         разрабатывал и full-stack приложения, с использованием стека: Nest.js,
-        Express.js, PostgreSQL, MongoDB и так далее.{" "}
-        <br className="sm:block hidden" /> Также имею опыт размещения
-        web-приложений на VPS - серверах. Верстал шаблоны на основе CMS:
-        OpenCart, Joomla, MODX, Wordpress - и размещал их на хостингах.{" "}
-        <br className="sm:block hidden" />
+        Express.js, PostgreSQL, MongoDB и так далее. <br />
+        Также имею опыт размещения web-приложений на VPS - серверах. <br />
+        Верстал шаблоны на основе CMS: OpenCart, Joomla, MODX, Wordpress - и
+        размещал их на хостингах. <br />
         P.S. Очень нравится познавать новые технологии, и конечно же сама
         разработка ПО. Считаю себя творческим человеком. Спасибо за внимание.
+        <br />
+        GitHub:{" "}
+        <a class="underline" target="_blank" href="https://github.com/weboson">
+          weboson
+        </a>
       </motion.p>
 
       {/* карточки */}

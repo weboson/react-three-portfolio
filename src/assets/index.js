@@ -8,7 +8,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
+import materialui from "./tech/materialui.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -21,10 +21,11 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import weboson from "./company/weboson.png";
+import lets_try_js from "./company/lets_try_js.jpg";
+import ulbitv from "./company/ulbitv.jpg";
+import webdev from "./company/webdev.jpg";
+import annblok from "./company/annBlok.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -40,7 +41,7 @@ export {
   menu,
   close,
   css,
-  docker,
+  materialui,
   figma,
   git,
   html,
@@ -52,10 +53,11 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  lets_try_js,
+  weboson,
+  ulbitv,
+  webdev,
+  annblok,
   carrent,
   jobit,
   tripguide,
