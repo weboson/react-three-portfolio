@@ -46,14 +46,14 @@ const ExperienceCard = ({ experience }) => {
         </p>
         <span>
           link:{" "}
-          <a target="_blank" class="underline" href={experience.link}>
+          <a target="_blank" className={"underline"} href={experience.link}>
             {experience.name}
           </a>
         </span>
         <br />
         <span>
           Repo:{" "}
-          <a target="_blank" class="underline" href={experience.repo}>
+          <a target="_blank" className={"underline"} href={experience.repo}>
             GitHub
           </a>
         </span>

@@ -70,7 +70,7 @@ const About = () => {
         разработка ПО. Считаю себя творческим человеком. Спасибо за внимание.
         <br />
         GitHub:{" "}
-        <a class="underline" target="_blank" href="https://github.com/weboson">
+        <a className={"underline"} target="_blank" href="https://github.com/weboson">
           weboson
         </a>
       </motion.p>

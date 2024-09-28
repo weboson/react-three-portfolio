@@ -32,7 +32,7 @@ const Contact = () => {
 
   // обработчик формы: 
   const handleChange = (e) => { 
-    console.log(e.target) // содержит HTML-элемент <input type="text" name="name" placeholder="What's your name?" class="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outliner-none border-none font-medium" value="текст ">
+    console.log(e.target) // содержит HTML-элемент <input type="text" name="name" placeholder="What's your name?" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outliner-none border-none font-medium" value="текст ">
     const { name, value } = e.target;
 
     setForm({ ...form, [name]: value })
