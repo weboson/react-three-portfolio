@@ -21,9 +21,9 @@ import {
   ulbitv,
   webdev,
   annblok,
-  carrent,
-  jobit,
-  tripguide,
+  medcalendar,
+  budget,
+  todolist,
   threejs,
 } from "../assets";
 
@@ -231,7 +231,7 @@ const experiences = [
       "Осуществил базовые функции: сервер, файловая система, события, стримы, глобальные объекты и т.д.",
       "Работа с базой данных: MongoDB",
       "Создание своего фреймворка, по типу Express.js.",
-      "etc."
+      "etc.",
     ],
   },
   {
@@ -281,58 +281,60 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "MedCalendar",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Данное fullstack приложение позволяет планировать и контролировать прием лекарственных средств. Для удобства имеет 4 режима отображения: Day, Week, Month и Year.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "nest",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "postgresql",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: medcalendar,
+    source_code_link: "https://github.com/weboson/MedCalendar-frontend",
+    link: "https://weboson.github.io/MedCalendar-frontend/",
   },
   {
-    name: "Job IT",
+    name: "Budget Management",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Fullstack приложение, которое позволяет рассчитывать доход и расход бюджета пользователя.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "nest",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "postgresql",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: budget,
+    source_code_link: "https://github.com/weboson/Fullstack-Nest-React",
+    link: "https://weboson.github.io/budget/",
   },
   {
-    name: "Trip Guide",
+    name: "To-Do List",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Приложение позволяет записывать задачи, статус их выполнения, а также удалять их.",
     tags: [
       {
-        name: "nextjs",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "react-router-dom",
         color: "green-text-gradient",
       },
       {
@@ -340,8 +342,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: todolist,
+    source_code_link: "https://github.com/weboson/react-ToDoList",
+    link: "https://weboson.github.io/todolist/",
   },
 ];
 

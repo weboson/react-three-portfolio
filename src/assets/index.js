@@ -27,9 +27,9 @@ import ulbitv from "./company/ulbitv.jpg";
 import webdev from "./company/webdev.jpg";
 import annblok from "./company/annBlok.jpg";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import medcalendar from "./medcalendar.png";
+import budget from "./budget.png";
+import todolist from "./todolist.png";
 
 export {
   logo,
@@ -58,7 +58,7 @@ export {
   ulbitv,
   webdev,
   annblok,
-  carrent,
-  jobit,
-  tripguide,
+  medcalendar,
+  budget,
+  todolist,
 };
