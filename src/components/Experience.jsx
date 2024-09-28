@@ -97,7 +97,7 @@ const Experience = () => {
         >
           <motion.div variants={textVariant()}>
             <p className={styles.sectionSubText}>Чему я научился</p>
-            <h2 className={styles.sectionHeadText}>Мой опыт</h2>
+            <h2 className={styles.sectionHeadText}>Мой опыт.</h2>
           </motion.div>
         </motion.div>
 
