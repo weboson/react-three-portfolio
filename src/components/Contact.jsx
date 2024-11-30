@@ -32,7 +32,7 @@ const Contact = () => {
 
   // обработчик формы: 
   const handleChange = (e) => { 
-    console.log(e.target) // содержит HTML-элемент <input type="text" name="name" placeholder="What's your name?" class="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outliner-none border-none font-medium" value="текст ">
+    console.log(e.target) // содержит HTML-элемент <input type="text" name="name" placeholder="What's your name?" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outliner-none border-none font-medium" value="текст ">
     const { name, value } = e.target;
 
     setForm({ ...form, [name]: value })
@@ -43,23 +43,23 @@ const Contact = () => {
     e.preventDefault(); // отключить рекацию по-умолчанию: обновление окна при нажатии на "Отправить"
     setLoading(true); // лоадинг
 
-    //* библиотека не активная (не регистрировался в https://www.emailjs.com/)
+    //! библиотека активна я зарегистрировался в https://www.emailjs.com/ (данные аккаунта в доке "Деплой - Pet проекта 2023-2024")
     emailjs.send(
-      'servise_ID',
-      'template_ID',
+      'service_ipxcc8o',
+      'template_7piz0tq',
       {
         from_name: form.name,
         to_name: 'Rishat',
         from_email: form.email,
-        to_email: 'contact@jsmastery.pro',
+        to_email: 'virisound@gmail.com',
         message: form.message,
       },
-      'Key'
+      'ZM3z8_n66UUBgdFyN'
     )
     .then(() => {
       //* при успешной отпавки Email
       setLoading(false);
-      alert('Thank you. I will get back to you as soon as possible.');
+      alert('Спасибо. Я свяжусь с вами как можно скорее.');
 
       // сброс строк
       setForm({
@@ -73,7 +73,7 @@ const Contact = () => {
       setLoading(false);
 
       console.log(error);
-      alert('Something went wrong.');
+      alert('Ошибка. Моя почта: virisound@gmail.com. Пометка +++++WEBOSON++++++');
     })
   };
 
@@ -84,16 +84,18 @@ const Contact = () => {
         variants={slideIn('left', 'tween', 0.2, 1)} // движение слево на право
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={styles.sectionSubText}>Напишите мне</p>
+        <h3 className={styles.sectionHeadText}>Связь</h3>
+        <span className={styles.sectionSubText}>VK: <a href="https://vk.com/id444277175">Rishat Hasselhoff</a></span>
 
         <form
+          // action="mailto:virisound@gmail.com" method="post"
           ref={formRef}
           onSubmit={handleSubmit}
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-4'>Ваше имя</span>
             <input
               type="text"
               name='name'
@@ -112,7 +114,7 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+            <span className='text-white font-medium mb-4'>Ваш Email</span>
             <input
               type="email"
               name='email'
@@ -130,7 +132,7 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-medium mb-4'>Сообщение:</span>
             <textarea
               rows='7'
               name='message'
@@ -145,7 +147,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? 'Отправление...' : 'Отправить'}
           </button>
         </form>
 
